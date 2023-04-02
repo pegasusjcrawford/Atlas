@@ -1,9 +1,8 @@
 using System;
 using System.Collections.Generic;
-using Blockcore.Consensus;
-using Blockcore.Consensus.BlockInfo;
+using Okeanos.Chain.Consensus;
 using Okeanos.Atlas.Indexer.Settings;
-using Blockcore.Networks;
+using Okeanos.Chain.Networks;
 using Microsoft.Extensions.Options;
 using NBitcoin;
 using NBitcoin.DataEncoders;
@@ -21,7 +20,7 @@ namespace Okeanos.Atlas.Indexer.Operations.Types
 
          var consensusFactory = (ConsensusFactory)Activator.CreateInstance(Type.GetType(networkConfig.NetworkConsensusFactoryType));
 
-         Consensus = new Consensus.Consensus(
+         Consensus = new Consensus(
                 consensusFactory: consensusFactory,
                 consensusOptions: null,
                 coinType: 0,
@@ -41,7 +40,7 @@ namespace Okeanos.Atlas.Indexer.Operations.Types
                 premineHeight: 0,
                 premineReward: 0,
                 proofOfWorkReward: 0,
-                targetTimespan: TimeSpan.Zero,
+                powTargetTimespan: TimeSpan.Zero,
                 targetSpacing: TimeSpan.Zero,
                 powAllowMinDifficultyBlocks: false,
                 posNoRetargeting: false,
@@ -52,11 +51,14 @@ namespace Okeanos.Atlas.Indexer.Operations.Types
                 lastPowBlock: 0,
                 proofOfStakeLimit: null,
                 proofOfStakeLimitV2: null,
-                proofOfStakeReward: 0,
-                proofOfStakeTimestampMask: 0x0000003F // 64 sec
+                proofOfStakeReward: 0
             );
 
-         Base58Prefixes = new byte[12][];
+         // targetTimespan: TimeSpan.Zero,
+         // proofOfStakeTimestampMask: 0x0000003F // 64 sec
+
+
+            Base58Prefixes = new byte[12][];
          Base58Prefixes[(int)Base58Type.PUBKEY_ADDRESS] = new byte[] { (networkConfig.NetworkPubkeyAddressPrefix) };
          Base58Prefixes[(int)Base58Type.SCRIPT_ADDRESS] = new byte[] { (networkConfig.NetworkScriptAddressPrefix) };
 

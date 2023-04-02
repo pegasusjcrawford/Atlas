@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using Blockcore.Consensus.TransactionInfo;
 using Okeanos.Atlas.Indexer.Client.Types;
+using NBitcoin;
 
 namespace Okeanos.Atlas.Indexer.Operations.Types
 {
