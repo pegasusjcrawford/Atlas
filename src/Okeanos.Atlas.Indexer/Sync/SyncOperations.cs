@@ -1,9 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Blockcore.Consensus.BlockInfo;
-using Blockcore.Consensus.ScriptInfo;
-using Blockcore.Consensus.TransactionInfo;
 using Okeanos.Atlas.Indexer.Client;
 using Okeanos.Atlas.Indexer.Client.Types;
 using Okeanos.Atlas.Indexer.Operations;
@@ -17,6 +14,7 @@ using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
+using NBitcoin;
 
 namespace Okeanos.Atlas.Indexer.Sync
 {
