@@ -49,8 +49,8 @@ namespace Okeanos.Atlas.Indexer.Extensions
       /// <returns></returns>
       public static IConfigurationBuilder AddBlockcore(this IConfigurationBuilder builder, string title, string[] args)
       {
-         Blockcore.Properties.BlockcoreLogo.SetTitle(title);
-         Console.WriteLine(Blockcore.Properties.BlockcoreLogo.Logo);
+         //Blockcore.Properties.BlockcoreLogo.SetTitle(title);
+         //Console.WriteLine(Blockcore.Properties.BlockcoreLogo.Logo);
 
          string chain = args
             .DefaultIfEmpty("--chain=BTC")
