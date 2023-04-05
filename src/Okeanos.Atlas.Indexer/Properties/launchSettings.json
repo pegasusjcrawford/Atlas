@@ -2,6 +2,7 @@
   "profiles": {
     "Okeanos.Atlas.Indexer": {
       "commandName": "Project",
+      "commandLineArgs": "--local --chain=OKNS",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
