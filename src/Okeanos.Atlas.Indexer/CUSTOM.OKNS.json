@@ -9,7 +9,7 @@
       "Color": "#f3b623"
    },
   "Network": {
-    "NetworkConsensusFactoryType": "Okeanos.Chain.SmartContracts.PoW.SmartContractPowConsensusFactory, Okeanos.Chain.SmartContracts",
+    "NetworkConsensusFactoryType": "Okeanos.Chain.SmartContracts.PoS.SmartContractPosConsensusFactory, Okeanos.Chain.SmartContracts",
     "NetworkPubkeyAddressPrefix": 0,
     "NetworkScriptAddressPrefix": 5,
     "NetworkWitnessPrefix": "coin",
